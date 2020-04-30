@@ -539,11 +539,15 @@
                     <div class="mb-2">
                       <input name="group2" type="radio" class="form-check-input with-gap" id="radioWithGap4" checked
                         required>
+                        <input type=button value="Uncheck" onclick=
+                        "document.getElementById('radioWithGap4').checked = false">
                       <label class="form-check-label" for="radioWithGap4">Credit card</label>
                     </div>
                     <div class="mb-2">
                       <input iname="group2" type="radio" class="form-check-input with-gap" id="radioWithGap5"
                         required>
+                        <input type=button value="Uncheck" onclick=
+                        "document.getElementById('radioWithGap5').checked = false">
                       <label class="form-check-label" for="radioWithGap5">Debit card</label>
                     </div>
                     
@@ -582,14 +586,11 @@
                     </div>
                   </div>
                   <hr class="mb-4">
-  
-                  <button class="btn btn-primary btn-lg btn-block" id="placeOrder"  type="submit">Place Order</button>
+                  
+                  
+                  <button class="btn btn-primary btn-lg btn-block" onclick="location.href='catalog'" type="submit">Place Order</button>
 
-                  <script type="text/javascript">
-                    document.getElementById("placeOrder").onclick = function () {
-                        location.href = orderPlaced.component.html;
-                    };
-                </script>
+                 
                  
                   
   
