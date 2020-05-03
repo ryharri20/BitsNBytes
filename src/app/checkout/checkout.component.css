@@ -14,3 +14,9 @@ td {
 p {
     text-align: right;
 }
+
+.my-class{
+    width: 300px!important;
+    justify-content: center;
+    justify-content: flex-end;
+}

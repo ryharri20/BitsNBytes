@@ -28,8 +28,10 @@ export class CheckoutComponent implements OnInit {
 
 
   clearCart() {
+    window.alert('Your order has been placed!');
     this.items = [];
     return this.items;
+    
   }
 
   removeitem(item) {
