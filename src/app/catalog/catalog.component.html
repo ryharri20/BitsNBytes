@@ -1,173 +1,49 @@
-<div class="container my-5 py-5">
+<!-- 
+<div *ngFor="let product of products; index as productId">
 
+  <img *ngIf='product.imageUrl' [src]='product.imageUrl' width="200">
 
-    <!--Section: Content-->
-    <section class="text-center">
+  <h3>
+    <a [title]="product.name + ' details'" >
+      {{ product.name }}
+    </a>
+    <h4>{{ product.price | currency }}</h4>
+  </h3>
 
-
-      <!--Grid row-->
-      <div class="row">
-
-       
-        <!--Grid column-->
-        <div class="col-lg-4 col-md-12 mb-4">
-            <div class="card">
-
-          <a href="" class="waves-effect waves-light"><img
-              src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/13.jpg" class="img-fluid"
-              alt=""></a>
-
-          <p class="mb-1"><a href="" class="font-weight-bold black-text">Samsung CT-567</a></p>
-
-          <p class="mb-1"><strong>$299</strong></p>
-
-          
-
-          
-
-          <button type="button" class="btn btn-primary btn-rounded btn-sm px-3">Buy Now</button>
-          
-        </div>
-        
-        </div>
-    
-        <!--Grid column-->
-        
-        <!--Grid column-->
-        <div class="col-lg-4 col-md-12 mb-4">
-            <div class="card">
-          <a href="" class="waves-effect waves-light"><img
-              src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/12.jpg" class="img-fluid"
-              alt=""></a>
-
-          <p class="mb-1"><a href="" class="font-weight-bold black-text">Dell V-964i</a> </p>
-
-          <p class="mb-1"><strong>$299</strong> </p>
-
-          
-
-       
-
-          <button type="button" class="btn btn-primary btn-rounded btn-sm px-3">Buy Now</button>
-          
-        </div>
-        </div>
-        <!--Grid column-->
-
-        <!--Grid column-->
-        <div class="col-lg-4 col-md-12 mb-4">
-            <div class="card">
-          <a href="" class="waves-effect waves-light"><img
-              src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/14.jpg" class="img-fluid"
-              alt=""></a>
-
-          <p class="mb-1"><a href="" class="font-weight-bold black-text">Sony TV-675</a></p>
-
-          <p class="mb-1"><strong>$299</strong></p>
-
-          
-
-       
-
-          <button type="button" class="btn btn-primary btn-rounded btn-sm px-3">Buy Now</button>
-          
-        </div>
-        </div>
-        <!--Grid column-->
-
-      </div>
-      <!--Grid row-->
-
-
-    </section>
-    <!--Section: Content-->
-
-
-  </div>
+  <p *ngIf="product.description">
+    Description: {{ product.description }}
+  </p>
+  <button (click)="addToCart(product)">Buy</button>
   
-  <div class="container my-5 py-5">
 
+</div> -->
+<div class="container">
+  <div class="card border-0 shadow my-5">
+      <div class="card-body p-5">
 
-    <!--Section: Content-->
-    <section class="text-center">
+        <h1>Products:</h1>
+    <div class='table-responsive'>
+      <table class='table' *ngIf='products && products.length'>
 
+        <tbody>
+          <tr *ngFor='let product of products'>
+            <td>
+              <img *ngIf='product.imageUrl' [src]='product.imageUrl' width="200">
 
-      <!--Grid row-->
-      <div class="row">
+            </td>
+            <td>{{ product.name }}</td>
+            <td><h3>{{ product.description }}</h3></td>
+            <td>{{ product.price | currency }}</td>
+            <td>
+                          <button mat-raised-button primary (click)="addToCart(product)">Buy</button>
 
-       
-        <!--Grid column-->
-        <div class="col-lg-4 col-md-12 mb-4">
-            <div class="card">
-
-          <a href="" class="waves-effect waves-light"><img
-              src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/13.jpg" class="img-fluid"
-              alt=""></a>
-
-          <p class="mb-1"><a href="" class="font-weight-bold black-text">Samsung CT-567</a></p>
-
-          <p class="mb-1"><strong>$299</strong></p>
-
-          
-
-          
-
-          <button type="button" class="btn btn-primary btn-rounded btn-sm px-3">Buy Now</button>
-          
-        </div>
-        
-        </div>
-    
-        <!--Grid column-->
-        
-        <!--Grid column-->
-        <div class="col-lg-4 col-md-12 mb-4">
-            <div class="card">
-          <a href="" class="waves-effect waves-light"><img
-              src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/12.jpg" class="img-fluid"
-              alt=""></a>
-
-          <p class="mb-1"><a href="" class="font-weight-bold black-text">Dell V-964i</a> </p>
-
-          <p class="mb-1"><strong>$299</strong> </p>
-
-          
-
-       
-
-          <button type="button" class="btn btn-primary btn-rounded btn-sm px-3">Buy Now</button>
-          
-        </div>
-        </div>
-        <!--Grid column-->
-
-        <!--Grid column-->
-        <div class="col-lg-4 col-md-12 mb-4">
-            <div class="card">
-          <a href="" class="waves-effect waves-light"><img
-              src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/14.jpg" class="img-fluid"
-              alt=""></a>
-
-          <p class="mb-1"><a href="" class="font-weight-bold black-text">Sony TV-675</a></p>
-
-          <p class="mb-1"><strong>$299</strong></p>
-
-          
-
-       
-
-          <button type="button" class="btn btn-primary btn-rounded btn-sm px-3">Buy Now</button>
-          
-        </div>
-        </div>
-        <!--Grid column-->
-
-      </div>
-      <!--Grid row-->
-
-
-    </section>
-    <!--Section: Content-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
 
   </div>
+</div></div>
+
