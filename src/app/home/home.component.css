@@ -2,3 +2,11 @@ h3{
     text-align: center;
     font-size: 5em;
 } 
+
+
+
+.my-class{
+    width: 300px!important;
+    justify-content: center;
+    justify-content: flex-end;
+}
