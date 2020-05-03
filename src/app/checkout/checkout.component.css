@@ -2,3 +2,15 @@ h2{
     text-align: center;
     font-size: 2em;
 } 
+
+checkout {
+    font-size: 2em;
+}
+
+td {
+    
+    vertical-align: text-bottom;
+  }
+p {
+    text-align: right;
+}

@@ -9,10 +9,11 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./checkout.component.css']
 })
 export class CheckoutComponent implements OnInit {
-
+  item;
   items;
   products = products;
   product;
+  totalamount : Number = 0;
 
   constructor(
     private route: ActivatedRoute,
@@ -23,11 +24,32 @@ export class CheckoutComponent implements OnInit {
     this.items = this.cartService.getItems();
   }
 
-  
+
+
+
   clearCart() {
-    this.items = this.cartService.clearCart();
+    this.items = [];
+    return this.items;
   }
-  
-    // addToCart(product) {
-    //   this.cartService.addToCart(product);
+
+  removeitem(item) {
+    this.items.splice(this.items.indexOf(item), 1);
+  }
+
+  getTotal(){
+    let total = 0;
+    for (var i = 0; i < this.items.length; i++) {
+        if (this.items[i].price) {
+            total += this.items[i].price * 1
+            this.totalamount = total;
+        }
+    }
+    return total;
+}
+
+
+
+
+  // addToCart(product) {
+  //   this.cartService.addToCart(product);
 }
