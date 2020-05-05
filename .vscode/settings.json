@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/889b8e7c-e4cf-43cc-a1b7-db1fe978765c/resourceGroups/BitsNBytes/providers/Microsoft.Web/sites/BitsNBytes",
+    "appService.deploySubpath": ""
+}
